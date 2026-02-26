@@ -1,0 +1,28 @@
+<mvc:View controllerName="com.northwind.amannorthwind.controller.Products"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page1" title="Products">
+        <content>
+            <Table id="productsTable" items="{/Products}">
+                <columns>
+                    <Column id="colProdID"><Text id="textProdID" text="Product ID"/></Column>
+                    <Column id="colProdName"><Text id="textProdName" text="Product Name"/></Column>
+                    <Column id="colProdPrice"><Text id="textProdPrice" text="Unit Price"/></Column>
+                    <Column id="colProdStock"><Text id="textProdStock" text="Units In Stock"/></Column>
+                </columns>
+
+                <items>
+                  
+                    <ColumnListItem id="colListItem" type="Active" press="onItemPress">
+                        <cells>
+                            <Text id="cellTextProdID" text="{ProductID}"/>
+                            <Text id="cellTextProdName" text="{ProductName}"/>
+                            <Text id="cellTextProdPrice" text="{UnitPrice}"/>
+                            <Text id="cellTextProdStock" text="{UnitsInStock}"/>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View>

@@ -1,0 +1,27 @@
+<mvc:View controllerName="com.northwind.amannorthwind.controller.Categories"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page2" title="Categories">
+        <content>
+            <Table id="categoriesTable" items="{/Categories}">
+                <columns>
+                    <Column id="colCategoryID"><Text id="textCategoryID" text="Category ID"/></Column>
+                    <Column id="colCategoryName"><Text id="textCategoryName" text="Category Name"/></Column>
+                    <Column id="colCategoryDesc"><Text id="textCategoryDesc" text="Description"/></Column>
+                    <!-- <Column id="col8"><Text id="txt12" text="Picture"/></Column> -->
+                </columns>
+ 
+                <items>
+                    <ColumnListItem id="collist2" press=".onItemPress" type="Active">
+                        <cells>
+                            <Text id="cellTextCategoryID" text="{CategoryID}"/>
+                            <Text id="cellTextCategoryName" text="{CategoryName}"/>
+                            <Text id="cellTextCategoryDesc" text="{Description}"/>
+                            <!-- <Text id="txt16" text="{Picture}"/> -->
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View>

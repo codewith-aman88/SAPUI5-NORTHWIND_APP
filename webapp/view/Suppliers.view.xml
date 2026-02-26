@@ -1,0 +1,34 @@
+<mvc:View controllerName="com.northwind.amannorthwind.controller.Suppliers"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+
+    <Page id="supplierPage" title="Suppliers">
+        <content>
+            <Table id="suppliersTable" items="{/Suppliers}">
+                <columns>
+                    <Column id="colSuppID"><Text id="textSuppID" text="Supplier ID"/></Column>
+                    <Column id="colCompany"><Text id="textCompany" text="Company Name"/></Column>
+                    <Column id="colContact"><Text id="textContact" text="Contact Name"/></Column>
+                    <Column id="colTitle"><Text id="textTitle" text="Contact Title"/></Column>
+                    <Column id="colCity"><Text id="textCity" text="City"/></Column>
+                    <Column id="colCountry"><Text id="textCountry" text="Country"/></Column>
+                    <Column id="colPhone"><Text id="textPhone" text="Phone"/></Column>
+                </columns>
+
+                <items>
+                    <ColumnListItem id="supplierRow" type="Active" press="onSupplierPress">
+                        <cells>
+                            <Text id="cellSuppID" text="{SupplierID}"/>
+                            <Text id="cellCompany" text="{CompanyName}"/>
+                            <Text id="cellContact" text="{ContactName}"/>
+                            <Text id="cellTitle" text="{ContactTitle}"/>
+                            <Text id="cellCity" text="{City}"/>
+                            <Text id="cellCountry" text="{Country}"/>
+                            <Text id="cellPhone" text="{Phone}"/>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View>

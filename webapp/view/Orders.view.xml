@@ -1,0 +1,36 @@
+<mvc:View
+    controllerName="com.northwind.amannorthwind.controller.Orders"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+
+    <Page id="ordersPage" title="Orders">
+        <content>
+            <!-- If your model is named (e.g., "northwind"), change to items="{northwind>/Orders}" -->
+            <Table id="ordersTable" items="{/Orders}">
+                <columns>
+                    <Column id="_IDGenColumn"><Text id="_IDGenText1" text="Order ID"/></Column>
+                    <Column id="_IDGenColumn1"><Text id="_IDGenText2" text="Customer ID"/></Column>
+                    <Column id="_IDGenColumn2"><Text id="_IDGenText3" text="Employee ID"/></Column>
+                    <Column id="_IDGenColumn3"><Text id="_IDGenText4" text="Order Date"/></Column>
+                    <Column id="_IDGenColumn4"><Text id="_IDGenText5" text="Freight"/></Column>
+                    <Column id="_IDGenColumn5"><Text id="_IDGenText6" text="Ship City"/></Column>
+                    <Column id="_IDGenColumn6"><Text id="_IDGenText7" text="Ship Country"/></Column>
+                </columns>
+
+                <items>
+                    <ColumnListItem id="_IDGenColumnListItem" type="Active" press=".onOrderPress">
+                        <cells>
+                            <Text id="_IDGenText8" text="{OrderID}"/>
+                            <Text id="_IDGenText9" text="{CustomerID}"/>
+                            <Text id="_IDGenText10" text="{EmployeeID}"/>
+                            <Text id="_IDGenText11" text="{OrderDate}"/>
+                            <Text id="_IDGenText12" text="{Freight}"/>
+                            <Text id="_IDGenText13" text="{ShipCity}"/>
+                            <Text id="_IDGenText14" text="{ShipCountry}"/>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View>

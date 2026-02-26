@@ -1,0 +1,42 @@
+<mvc:View controllerName="com.northwind.amannorthwind.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    displayBlock="true">
+
+    
+    <Page id="page" title="Northwind Navigation">
+        <content>
+            <HBox id="hbox" class="sapUiSmallMargin" justifyContent="Start">
+                <GenericTile id="gen1" header="Products" press=".onPressProducts" class="sapUiTinyMargin">
+                    <TileContent id="ttlcon1">
+                        <ImageContent id="img1" src="sap-icon://product" />
+                    </TileContent>
+                </GenericTile>
+
+                <GenericTile id="gen2" header="Categories" press=".onPressCategories" class="sapUiTinyMargin">
+                    <TileContent id="ttlcon2">
+                        <ImageContent id="img2" src="sap-icon://tags" />
+                    </TileContent>
+                </GenericTile>
+
+                <GenericTile id="gen3" header="Suppliers" press=".onPressSuppliers" class="sapUiTinyMargin">
+                    <TileContent id="ttlcon3">
+                        <ImageContent id="img3" src="sap-icon://supplier" />
+                    </TileContent>
+                </GenericTile>
+
+                <GenericTile id="gen4" header="Orders" press=".onOrderPress" class="sapUiTinyMargin">
+                    <TileContent id="ttlcon4">
+                        <ImageContent id="img4" src="sap-icon://sales-order" />
+                    </TileContent>
+                </GenericTile>
+
+                <GenericTile id="gen5" header="Regions" press=".onRegionPress" class="sapUiTinyMargin">
+                    <TileContent id="ttlcon5">
+                        <ImageContent id="img5" src="sap-icon://world" />
+                    </TileContent>
+                </GenericTile>
+            </HBox>
+        </content>
+    </Page>
+</mvc:View>

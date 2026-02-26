@@ -1,0 +1,26 @@
+<mvc:View controllerName="com.northwind.amannorthwind.controller.Regions"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+
+    <Page id="regionsPage" title="Regions">
+        <content>
+            <!-- Default model binding -->
+            <!-- If named model, change to: items="{northwind>/Regions}" -->
+            <Table id="regionsTable" items="{/Regions}">
+                <columns>
+                    <Column id="_IDGenColumn7"><Text id="_IDGenText15" text="Region ID"/></Column>
+                    <Column id="_IDGenColumn8"><Text id="_IDGenText16" text="Region Description"/></Column>
+                </columns>
+
+                <items>
+                    <ColumnListItem id="regionRow" type="Active" press=".onRegionPress">
+                        <cells>
+                            <Text id="_IDGenText17" text="{RegionID}"/>
+                            <Text id="_IDGenText18" text="{RegionDescription}"/>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View>

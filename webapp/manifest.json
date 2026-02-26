@@ -1,0 +1,181 @@
+{
+  "_version": "1.76.0",
+  "sap.app": {
+    "id": "com.northwind.amannorthwind",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.18.6",
+      "toolsId": "125b333e-2438-4fe2-9928-987a6e9a0dc1"
+    },
+    "dataSources": {
+      "mainService": {
+        "uri": "/V2/Northwind/Northwind.svc/",
+        "type": "OData",
+        "settings": {
+          "annotations": [],
+          "localUri": "localService/mainService/metadata.xml",
+          "odataVersion": "2.0"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.144.0",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "com.northwind.amannorthwind.i18n.i18n"
+        }
+      },
+      "": {
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {}
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "transition": "slide",
+        "type": "View",
+        "viewType": "XML",
+        "path": "com.northwind.amannorthwind.view",
+        "async": true,
+        "viewPath": "com.northwind.amannorthwind.view"
+      },
+      "routes": [
+        {
+          "name": "RouteView1",
+          "pattern": "",
+          "target": [
+            "TargetView1"
+          ]
+        },
+
+        {
+          "name": "RouteProducts",
+          "pattern": "Products",
+          "target": [
+            "TargetProducts"
+          ]
+        },
+
+        {
+          "name": "RouteCategories",
+          "pattern": "Categories",
+          "target": [
+            "TargetCategories"
+          ]
+        },
+
+        {
+          "name": "RouteSuppliers",
+          "pattern": "Suppliers",
+          "target": [
+            "TargetSuppliers"
+          ]
+        },
+
+        {
+          "name": "RouteOrders",
+          "pattern": "Orders",
+          "target": [
+            "TargetOrders"
+          ]
+        },
+
+        {
+          "name": "RouteRegions",
+          "pattern": "Regions",
+          "target": [
+            "TargetRegions"
+          ]
+        }
+
+
+      ],
+      "targets": {
+        "TargetView1": {
+          "id": "View1",
+          "name": "View1"
+        },
+
+         "TargetProducts": {
+          "id": "Products",
+          "name": "Products"
+        },
+
+         "TargetCategories": {
+          "id": "Categories",
+          "name": "Categories"
+        },
+
+        "TargetSuppliers": {
+          "id": "Suppliers",
+          "name": "Suppliers"
+        },
+
+        "TargetOrders": {
+          "id": "Orders",
+          "name": "Orders"
+        },
+
+        "TargetRegions": {
+          "id": "Regions",
+          "name": "Regions"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "com.northwind.amannorthwind.view.App",
+      "type": "XML",
+      "id": "App",
+      "async": true
+    }
+  }
+}
