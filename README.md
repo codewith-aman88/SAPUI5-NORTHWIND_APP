@@ -1,42 +1,80 @@
-## Application Details
-|               |
-| ------------- |
-|**Generation Date and Time**<br>Wed Jan 28 2026 14:26:00 GMT+0530 (India Standard Time)|
-|**App Generator**<br>SAP Fiori Application Generator|
-|**App Generator Version**<br>1.18.6|
-|**Generation Platform**<br>Visual Studio Code|
-|**Template Used**<br>Basic V2|
-|**Service Type**<br>OData URL|
-|**Service URL**<br>https://services.odata.org/V2/Northwind/Northwind.svc/|
-|**Module Name**<br>amannorthwind|
-|**Application Title**<br>Northwind Navigation|
-|**Namespace**<br>com.northwind|
-|**UI5 Theme**<br>sap_horizon|
-|**UI5 Version**<br>1.144.0|
-|**Enable Code Assist Libraries**<br>False|
-|**Enable TypeScript**<br>False|
-|**Add Eslint configuration**<br>False|
+# SAPUI5 NORTHWIND App
 
-## amannorthwind
+A simple SAPUI5 application that connects to the **Northwind OData service** (a public demo dataset) and displays business data using UI5 controls and views. This app was generated using SAP Fiori tools and built with standard SAPUI5/OpenUI5 patterns. 
 
-An SAP Fiori application.
+---
 
-### Starting the generated app
+## 🚀 What This Is
 
--   This app has been generated using the SAP Fiori tools - App Generator, as part of the SAP Fiori tools suite.  To launch the generated application, run the following from the generated application root folder:
+This is a front-end UI5 project that:
 
+* Uses SAPUI5 (UI Development Toolkit for HTML5) to build the UI. 
+* Connects to the **Northwind OData V2 service** to fetch sample data (products, orders, customers).
+* Demonstrates basic routing, models, views, and data binding with SAPUI5.
+
+The UI follows a simple Fiori-style layout and is meant for learning or prototyping.
+
+---
+
+## 🛠️ Features
+
+* SAPUI5 application scaffolded using SAP Fiori tools.
+* OData model configured to consume Northwind service. 
+* Navigation between views (products list, details, etc.). 
+* Mock data support for offline testing.
+
+---
+
+## 📦 Prerequisites
+
+Make sure you have these installed:
+
+* **Node.js** (Long Term Support version)
+* **npm** (comes with Node.js)
+
+---
+
+## 📥 How to Run It
+
+Clone or download the repo, then from the project root:
+
+```bash
+npm install
+npm start
 ```
-    npm start
+
+After that, open the app in your browser. It will load data from the Northwind OData service.
+
+If you want to try the app with offline mock data (handy if the OData service is down), use:
+
+```bash
+npm run start-mock
 ```
 
-- It is also possible to run the application using mock data that reflects the OData Service URL supplied during application generation.  In order to run the application with Mock Data, run the following from the generated app root folder:
+---
 
-```
-    npm run start-mock
-```
+## 📁 What’s in the Repo
 
-#### Pre-requisites:
+* **webapp/** – The core of the SAPUI5 app (views, controllers, models).
+* **ui5.yaml**, **ui5-local.yaml**, **ui5-mock.yaml** – UI5 Tooling configurations.
+* **package.json** – NPM dependencies and scripts.
 
-1. Active NodeJS LTS (Long Term Support) version and associated supported NPM version.  (See https://nodejs.org)
+---
 
+## 📚 Learning SAPUI5
 
+If you’re new to UI5 or want to understand how it works:
+
+* UI5 uses an MVC pattern and data binding to build dynamic web apps.
+* You can bind OData models to lists, tables, forms, and charts. 
+* A common challenge is browser CORS — tools like local proxies help with that.
+
+This project is a great starting point for real SAPUI5 projects.
+
+---
+
+## 📬 Feedback & Contributions
+
+Feel free to share suggestions, open issues, or contribute improvements.
+
+Happy coding!
